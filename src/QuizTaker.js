@@ -43,6 +43,16 @@ const QuizTaker = ({ quiz, setScore }) => {
           {option}
         </button>
       ))}
+      <div className="quiz-taker">
+      <h2>Take Quiz</h2>
+      <p>Time Left: {timeLeft}s</p>
+      <h3>{quiz[currentIndex].question}</h3>
+      {quiz[currentIndex].options.map((option, index) => (
+        <button className="submit-btn" key={index} onClick={() => handleAnswer(index)}>
+          {option}
+        </button>
+      ))}
+    </div>
     </div>
   );
 };
